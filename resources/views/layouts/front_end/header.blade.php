@@ -1,4 +1,4 @@
-<header class="main-header-three">
+<header class="main-header-three" >
     <div class="main-menu-three__top">
         <div class="container">
             <div class="main-menu-three__top-inner">
@@ -36,6 +36,7 @@
             </div>
         </div>
     </div>
+    
     <nav class="main-menu main-menu-three">
         <div class="main-menu-three__wrapper">
             <div class="container">
@@ -52,11 +53,11 @@
                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                         <ul class="main-menu__list">
                             <li>
-                                <a href="">Home</a>
+                                <a href="{{ route('welcome') }}">Home</a>
                             </li>
 
-                            <li>
-                                <a href="">About Us</a>
+                            <li class="current">
+                                <a href="{{ route('about.index') }}">About Us</a>
                             </li>
 
 
@@ -79,7 +80,7 @@
                             <li>
                                 <a href="">News</a>
                             </li>
-                            
+
                             <li>
                                 <a href="">Contact Us</a>
                             </li>

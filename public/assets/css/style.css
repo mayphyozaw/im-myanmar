@@ -1693,7 +1693,7 @@ xs sidebar
   content: "";
   height: 2px;
   border-radius: 0px;
-  /* background-color: var(--judges-base); */
+  background-color: var(--judges-base);
   position: absolute;
   bottom: -3px;
   left: 0px;

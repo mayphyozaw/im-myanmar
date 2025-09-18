@@ -14,15 +14,7 @@
     <meta name="description" content="IM Myanmar Company Limited " />
 
     <!-- fonts -->
-    <link rel="preconnect" href="../../../../fonts.googleapis.com/index.html">
-    <link rel="preconnect" href="../../../../fonts.gstatic.com/index.html" crossorigin>
-    <link
-        href="../../../../fonts.googleapis.com/css2ed52.css?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-        rel="stylesheet">
-    <link
-        href="../../../../fonts.googleapis.com/css21443.css?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
-        rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     
@@ -61,19 +53,20 @@
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/skill.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/feature.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/contact.css') }}" />
+    <link rel="stylesheet" href="{{asset('assets/css/module-css/page-header.css')}}" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
+
 </head>
 
 <body class="custom-cursor">
 
 
 
-
     <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div>
-    <!--Chat Popup-->
+    
     <div id="chat-popup" class="chat-popup">
         <div class="popup-inner">
             <div class="close-chat"><i class="fa fa-times"></i></div>
@@ -103,7 +96,7 @@
     </div>
 
 
-    <!-- Start sidebar widget content -->
+  
     <div class="xs-sidebar-group info-group info-sidebar">
         <div class="xs-overlay xs-bg-black"></div>
         <div class="xs-sidebar-widget">
@@ -192,17 +185,18 @@
             </div>
         </div>
     </div>
-    <!-- End sidebar widget content -->
+    
 
 
     <div class="page-wrapper">
+
         @include('layouts.front_end.header')
-
-        <!-- Main Slider Three Start -->
-        @include('layouts.front_end.slider')
-        <!--Main Slider Three Start -->
-
-        <!--About Three Start -->
+        @if (URL::current() == route('welcome'))
+            @include('layouts.front_end.slider')
+        @endif
+       
+       
+        
         @yield('content')
 
         <!--Site Footer Start-->
@@ -210,10 +204,7 @@
         <!--Site Footer End-->
 
 
-
-
-    </div><!-- /.page-wrapper -->
-
+    </div>
 
 
     <!-- /.mobile-nav__wrapper -->
@@ -254,10 +245,6 @@
     <script src="{{ asset('assets/js/gsap/gsap.js') }}"></script>
     <script src="{{ asset('assets/js/gsap/ScrollTrigger.js') }}"></script>
     <script src="{{ asset('assets/js/gsap/SplitText.js') }}"></script>
-
-
-
-
 
     <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
